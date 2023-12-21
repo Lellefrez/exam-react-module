@@ -14,7 +14,10 @@ export default ({ data }) => {
       <div className="actors-cards">
         <Link to={`person/${id}`}>
           <figure>
-            <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} />
+            <img
+              src={`https://image.tmdb.org/t/p/w500${profile_path}`}
+              alt="Immagine Profilo non trovata"
+            />
           </figure>
         </Link>
         <p>
