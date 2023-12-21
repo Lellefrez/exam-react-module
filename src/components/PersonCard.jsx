@@ -15,6 +15,7 @@ export default ({ data }) => {
           <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} />
         </figure>
         <p>Name: {name}</p>
+        <p>id: {id}</p>
         <p>Sex: {gender === 2 ? "Male" : "Female"}</p>
         <p>popularity: {popularity}</p>
         <p>occupation: {known_for_department}</p>

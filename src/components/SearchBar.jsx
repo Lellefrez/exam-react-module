@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default ({ onSearch }) => {
   const [value, setvalue] = useState("");
+
   return (
     <>
       <div className="search-bar">
@@ -13,7 +14,7 @@ export default ({ onSearch }) => {
         />
         <button
           onClick={() => {
-            onSearch(value);
+            value.trim().length > 0 && onSearch(value);
           }}
         >
           Search
