@@ -18,6 +18,7 @@ export default ({ onSearch }) => {
         <button
           onClick={() => {
             value.trim().length > 0 && onSearch(value);
+            setvalue("");
           }}
         >
           Search
