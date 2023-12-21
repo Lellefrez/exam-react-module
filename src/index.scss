@@ -1,0 +1,171 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+
+nav {
+  background-color: #333333;
+  padding: 10px;
+  text-align: center;
+
+  menu {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin-right: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        .link {
+          text-decoration: none;
+          color: gainsboro;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+h1 {
+  color: $primary-color;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.error-msg {
+  background-color: #ff4444;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.actors-cards {
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    p {
+      b {
+        color: purple;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  p {
+    margin: 5px 0;
+    color: #ffffff;
+    b {
+      color: $primary-color;
+    }
+  }
+
+  &:not(p) {
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.search-bar {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.person-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  figure {
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  section {
+    p {
+      margin: 5px 0;
+      b {
+        color: $primary-color;
+      }
+    }
+  }
+}

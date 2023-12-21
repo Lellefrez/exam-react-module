@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default ({ data }) => {
   const {
     id,
@@ -11,17 +12,26 @@ export default ({ data }) => {
   return (
     <>
       <div className="actors-cards">
-        <figure>
-          <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} />
-        </figure>
-        <p>Name: {name}</p>
-        <p>id: {id}</p>
-        <p>Sex: {gender === 2 ? "Male" : "Female"}</p>
-        <p>popularity: {popularity}</p>
-        <p>occupation: {known_for_department}</p>
-        <div>
-          works: <ul>{known_for.map((work) => work.title)}</ul>
-        </div>
+        <Link to={`person/${id}`}>
+          <figure>
+            <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} />
+          </figure>
+        </Link>
+        <p>
+          <b>Name:</b> {name}
+        </p>
+        <p>
+          <b>Sex:</b> {gender === 2 ? "Male" : "Female"}
+        </p>
+        <p>
+          <b>popularity:</b> {popularity}
+        </p>
+        <p>
+          <b>occupation:</b> {known_for_department}
+        </p>
+        <p>
+          <b>works:</b> {known_for.map((work) => `${work.title}, `)}
+        </p>
       </div>
     </>
   );

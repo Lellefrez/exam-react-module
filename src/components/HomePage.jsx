@@ -24,7 +24,7 @@ export default ({}) => {
         <div className="error-msg">{error}</div>
       ) : (
         <>
-          <h1>PERSONAGGI DEL MOMENTO</h1>
+          <h1>ATTORI DEL MOMENTO</h1>
           <div className="card-container">
             {actors.map((a) => (
               <PersonCard key={a.id} data={a} />

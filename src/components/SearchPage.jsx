@@ -2,6 +2,7 @@ import SearchBar from "./SearchBar";
 const apiKey = import.meta.env.VITE_API_KEY;
 import { useState } from "react";
 import PersonCard from "./PersonCard";
+import { Link } from "react-router-dom";
 
 export default () => {
   const [error, setError] = useState();
@@ -22,11 +23,13 @@ export default () => {
   return (
     <>
       <SearchBar onSearch={search} />
-      <div className="card-container">
-        {actors.map((a) => (
-          <PersonCard key={a.id} data={a} />
-        ))}
-      </div>
+      <Link>
+        <div className="card-container">
+          {actors.map((a) => (
+            <PersonCard key={a.id} data={a} />
+          ))}
+        </div>
+      </Link>
     </>
   );
 };
