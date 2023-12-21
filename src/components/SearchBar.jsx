@@ -11,6 +11,9 @@ export default ({ onSearch }) => {
           placeholder="Cerca Attore..."
           value={value}
           onChange={(e) => setvalue(e.target.value)}
+          onKeyUp={(e) => {
+            e.key === "Enter" && onSearch(value);
+          }}
         />
         <button
           onClick={() => {
